@@ -11,11 +11,9 @@ app.use(express.json())
 // mongoose Databases connection string
 connectDB()
 
-// routes
-const authRoutes = require('./routes/auth')
-
 // api
-app.use('/api', authRoutes)
+app.use('/api/auth', require('./routes/auth'))
+app.use('/api/private', require('./routes/private'))
 
 // Error Handler (Should be last piece of middleware)
 app.use(errorHandler)

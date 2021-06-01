@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const { register, 
+const { 
+    register, 
     login, 
     forgotpassword, 
     resetpassword 

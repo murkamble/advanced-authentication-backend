@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const { register, 
+const { 
+    register, 
     login, 
     forgotpassword, 
     resetpassword 
@@ -9,6 +10,6 @@ const { register,
 router.route('/register').post(register)
 router.route('/login').post(login)
 router.route('/forgotpassword').post(forgotpassword)
-router.route('/resetpassword/:resetToken').post(resetpassword)
+router.route('/resetpassword/:resetToken').put(resetpassword)
 
 module.exports = router
